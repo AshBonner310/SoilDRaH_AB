@@ -1,26 +1,24 @@
 ---
-title: "Data Rescue: Author YYYY"
+title: "Data Rescue: Kemp 2003"
 format:
   html:
     toc: true
-    eval: false #default to not evaluating the chunks, override this the template is completed
+    eval: true
 date: last-modified
 date-format: YYYY-MMMM
 bibliography:
-  - AuthorYYYY_Methods.bib #contains the citations in the methods section
-  - AuthorYYYY.bib #contains citation for the data source, generally a single citation of the primary paper
+  - Kemp2003_Methods.bib #contains the citations in the methods section
+  - Kemp2003.bib #contains citation for the data source, generally a single citation of the primary paper
 authors: #author scheme from https://quarto.org/docs/journals/authors.html
-  - id: ktoddbrown #use the github name as an id
+  - id: ashbonner310 #use the github name as an id
     name:
-      given: Katherine
-      family: Todd-Brown
-    orcid: 0000-0002-3109-8130
+      given: Ashley
+      family: Bonner
+    orcid: 0000-0001-7882-6353
     affiliation:
       - ref: uf-ees
-    role: #TODO define these roles and add reference
-      - transcription: lead #secondary, review
-      - standardization: lead #review
-      - curation: lead #review
+    role: 
+      - transcription: lead
 
 affiliations:
   - id: uf-ees
@@ -42,30 +40,13 @@ affiliations:
     
 timelog:
   - activity: 
-      description: add general UF affilation
-      who: ktoddbrown #github username
+      description: formulating/finishing data rescue plan, updating readme
+      who: ashbonner310 #github username
       #when you started and ended, can be just a year or down to the minute
-      start: 2026-01-29 T1530
-      #start: YYYY-MM-DD THH:MM
+      start: 2026-07-14 T1500
       #alternatively duration can be combined with a being/end
-      duration: P05M
-  - activity: 
-      description: revised execute with only provided files
-      who: ktoddbrown #github username
-      #when you started and ended, can be just a year or down to the minute
-      start: 2025-01-22 T1400
-      #start: YYYY-MM-DD THH:MM
-      #alternatively duration can be combined with a being/end
-      duration: P45M
-  - activity: 
-      description: Revise based on feedback
-      who: ktoddbrown #github username
-      #when you started and ended, can be just a year or down to the minute
-      end: 2025-11-26
-      #start: YYYY-MM-DD THH:MM
-      #alternatively duration can be combined with a being/end
-      duration: P30M
-version: 'vs202512' #template version, remove before use
+      duration: P2H
+
 ---
 
 
@@ -83,17 +64,19 @@ library(kableExtra) # pretty tables
 library(bibtex) # reading in BibTex files to R
 
 # data files for level 0
-methods.file <- "AuthorYYYY_Methods.md"
-tableN.file <- 'AuthorYYYY_TableN.csv'
-figureM.file <- 'AuthorYYYY_FigureM.csv'
+methods.file <- "Kemp2003_Methods.md"
+table1.file <- 'Kemp2003_Table1_XX.csv' ####NEED TO UPDATE WITH INITIALS WHEN FILE IS UPLOADED#########
+table3.file <- 'Kemp2003_Table3_XX.csv' ####NEED TO UPDATE WITH INITIALS WHEN FILE IS UPLOADED#########
+figure3.file <- 'Kemp2003_Figure3_XX.csv' ####NEED TO UPDATE WITH INITIALS WHEN FILE IS UPLOADED#######
+figure4.file <- 'Kemp2003_Figure4_XX.csv' ####NEED TO UPDATE WITH INITIALS WHEN FILE IS UPLOADED#######
 
 # Bibliography files
-primaryCitation.file <- 'AuthorYYYY.bib'
-methodsCitation.file <- 'AuthorYYYY_Methods.bib'
+primaryCitation.file <- 'Kemp2003.bib'
+methodsCitation.file <- 'Kemp2003_Methods.bib'
 
 # read function; you will need to create this function after you have your data
 #... rescue reviewed and before you finish your data harmonization.
-readsource.file <- '../../02_DataHarmonization/readAuthorYYYY.R'
+readsource.file <- '../../02_DataHarmonization/readKemp2003.R'
 if(file.exists(readsource.file)){
   source(readsource.file)
 }
@@ -116,7 +99,7 @@ For the discussion of this data rescue see the Github issue: https://github.com/
 <!--- After you read through the paper write a brief summary of what the study
 measured and what the data was used for in. This should be <250 words.--->
 
-AuthorYYYY primarily measures ... 
+Kemp2003 primarily measures ... 
 They use this data to look at ...
 
 ## Tables and figures
@@ -145,17 +128,17 @@ The purpose of this PROJECT is...
 
 <!--- Include a brief explaination to all the files in the folder--->
 
-These files are in the AuthorYYYY data rescue.
+These files are in the Kemp2003 data rescue.
 
-- [Readme](README_AUTHORYYYY.qmd)
+- [Readme](README_Kemp2003.qmd)
   + This is the primary file that documents the transcriptions and decision made during data rescue.
-- [AuthorYYYY.bib](AuthorYYYY.bib)
+- [Kemp2003.bib](Kemp2003.bib)
   + citation for article transcribed
-- [AuthorYYYY_Methods.bib](AuthorYYYY_Methods.bib)
+- [Kemp2003_Methods.bib](Kemp2003_Methods.bib)
   + citations for the methods section of the article
-- [AuthorYYYY_Methods.md](AuthorYYYY_Methods.md)
+- [Kemp2003_Methods.md](Kemp2003_Methods.md)
   + methods transcribed from primary article
-- [AuthorYYYY_TableN.csv](AuthorYYYY_TableN.csv)
+- [Kemp2003_TableN.csv](Kemp2003_TableN.csv)
   + table N from primary article with ...
 - [temp/](temp/)
     + scratch folder that will not be archived on GitHub, it should include local copies of the data resource (likely a PDF article) and any spreadsheets or other tools you used for the transcriptions.
@@ -166,8 +149,8 @@ These files are in the AuthorYYYY data rescue.
 
 + Lead
   - [ ] Read the article or data resource and the discription of the target project
-  - [ ] Create a fresh fork of the primary repository https://github.com/ktoddbrown/SoilDRaH/tree/main, it might be useful to rename it 'SoilDRaH_AuthorYYYY'
-  - [ ] Create a copy of this template folder and rename it to AuthorYYYY
+  - [ ] Create a fresh fork of the primary repository https://github.com/ktoddbrown/SoilDRaH/tree/main, it might be useful to rename it 'SoilDRaH_Kemp2003'
+  - [ ] Create a copy of this template folder and rename it to Kemp2003
   - [ ] Fill out Data summary section (except for the Files), the Data Rescue Plan (here!), and update the author section of the yml to reflect who is working on the rescue
   - [ ] Create a GitHub issue from the Data Rescue template and get feedback from a reviewer on the project (Dr Todd-Brown or a grad student typically).
   - [ ] Add the reviewer to the author list in the yml
@@ -221,7 +204,7 @@ And is crosschecked with the secondary transcription
 # You will want to repeat the line below to cross check each csv and md file in the
 #... data rescue. Having no lines flagged by this command will ensure that each character matches exactly.
 
-diff --strip-trailing-cr --suppress-common-lines -y temp/AuthorYYYY_TableN_ABC.md AuthorYYYY_TableN.md
+diff --strip-trailing-cr --suppress-common-lines -y temp/Kemp2003_TableN_ABC.md Kemp2003_TableN.md
 ```
 
 ## Methods
@@ -233,7 +216,7 @@ Any different to the cross check for the methods section will be output after th
 #| eval: false
 # You will want to repeat the line below to cross check each csv and md file in the
 #... data rescue. Having no lines flagged by this command will ensure that each character matches exactly.
-diff --strip-trailing-cr --suppress-common-lines -y temp/AuthorYYYY_Methods_ABC.md AuthorYYYY_Methods.md
+diff --strip-trailing-cr --suppress-common-lines -y temp/Kemp2003_Methods_ABC.md Kemp2003_Methods.md
 ```
 
 ### Methods  - Text
@@ -315,7 +298,7 @@ Below verifies that the data from the function matches what is coded above.
 #| label: checkReadFunction_lvl0
 
 if(file.exists(readsource.file)){
-  datafunction.lvl0.ls <- readAuthorYYYY(dataDir = '.',
+  datafunction.lvl0.ls <- readKemp2003(dataDir = '.',
                                          dataLevel = 'level0')
   
   if(isTRUE(all.equal(datafunction.lvl0.ls, data.lvl0.ls))){
@@ -507,7 +490,7 @@ Check for an exact match with the read function.
 #| label: checkReadFunction_lvl1
 
 if(file.exists(readsource.file)){
-  datafunction.lvl1.ls <- readAuthorYYYY(dataDir = '.',
+  datafunction.lvl1.ls <- readKemp2003(dataDir = '.',
                                          dataLevel = 'level1')
   
   if(isTRUE(all.equal(datafunction.lvl0.ls, data.lvl0.ls))){
