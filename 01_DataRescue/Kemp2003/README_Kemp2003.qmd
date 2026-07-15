@@ -90,43 +90,60 @@ is_type.file <- '../../semantics/SoilDRaHVocabulary_is_type.csv'
 
 # Data Summary
 
-<!---- Fill in the full citation here, generally found on the journal page and link in the issue that you started on GitHub. Though this is at the top of the document, this should be one of the last things you do because a lot of this will be a direct copy-paste into the issue template. --->
+> Kemp, P.R., Reynolds, J.F., Virginia, R.A. and Whitford, W.G., 2003. Decomposition of leaf and root litter of Chihuahuan desert shrubs: effects of three years of summer drought. Journal of Arid Environments, 53(1), pp.21-39. https://doi.org/10.1006/jare.2002.1025
 
-> Full citation here, exact format does not matter but it should be complete enough to find the paper. Please include the doi
+For the discussion of this data rescue see the Github issue: https://github.com/ktoddbrown/SoilDRaH/issues/207.
 
-For the discussion of this data rescue see the Github issue: https://github.com/ktoddbrown/SoilDRaH/issues/#.
-
-<!--- After you read through the paper write a brief summary of what the study
-measured and what the data was used for in. This should be <250 words.--->
-
-Kemp2003 primarily measures ... 
-They use this data to look at ...
+This paper deployed litter bags (leaves and roots) in the Chihuahuan Desert for three years, trying to measure the effects of seasonal precipitation (summer drought) of litter decomposition and chemistry.
+The litterbags were analyzed for mass loss as well as N, C, and ash fractions. 
+They used this data and compared to predictions using the CENTURY model.
 
 ## Tables and figures
 
-<!--- Write a brief discription of all the tables and figures in this source. This should include full variable names when possible. It is perfectly fine to restate the captions here or copy other text that feels complete. Please keep this to a single sentence for each table/figure.--->
-
 - Table 
-  1) Describe the data in the first table.
+  1) Measured and estimated chemical composition of initial litter; including measured Carbon and Nitrogen for *Larrea* and *Prosopis* species, as well as estimated fractions for Soluble and Lignin fractions sourced from the literature.
+  2) Decay constants, N/C ratios, and conversion inefficiencies for various litter and soil organic matter fractions used in CENTURY for this study.
+  3) Decay coefficients for litter fractions determined by best fit of litter mass data.
+  4) Regression of predicted values against measured mean values of litter mass and nitrogen content.
 
 - Figure 
-  1)  Describe the data in the first figure
+  1) Observed rainfall at the study sites during the length of the study.
+  2) Simulated soil water content, predicted from rainfall inputs at each site.
+  3) Observed and simulated Mass Loss for leaf and root litter.
+  4) Observed nitrogen content of leaf and root litter.
 
-## Fit for purpose: ProjectName
+## Fit for purpose: **De**composition **A**cross **D**rylands
 
-<!--- Write a brief discription of the project you are processing this data source for. This could be a copy-paste from other documentation. ---->
+This paper was identified for data rescue with the Decomposition Across Drylands (DeAD) project. 
+The paper includes a litterbug study in the dryland region of southern New Mexico.
 
-This data is identified as a data source for PROJECT.
-The purpose of this PROJECT is...
+**Location**: Northern Chihuahuan Desert New Mexico US. Jornada Long-Term Ecological Research (LTER) site at the southern end of the Jornada del Muerto Basin of south-central New Mexico, U.S.A. (Dona Ana County).
 
-<!--- Include a list of the key variables identified for the project. This is used to identify the elements for the paper for the data rescue. An example is below for a basic geo-located soil carbon stock project. --->
+**Duration**: 41 months from January 1992 - June 1995.
 
-  - Location: The geo-location is given in the site description section of the methods. Both latitude and longitude are given but not the datum/projection that was used.
-  - Soil carbon stock: Soil carbon stock was calculated from organic carbon fraction and bulk density and is reported in table 3 across two treatments and one control. Coarse fraction was not reported and does not appear to be included.
+**Mass loss**: Leaf and root litter receiving natural rainfall lost 74% and 36% total mass, respectively. 
+*Prosopis* leaf and root receiving natural rainfall lost 60% and 35%. 
+The drought effect recorded insignificant differences in the first 18 months but reduced decay in the drought conditions for the remainder of the study. 
+Approximately 22% reduction in leaf litter decay and >60% reduction in root decay for both species.
+
+**Solar exposure**: Slight reduced solar exposure due to polyethylene rain shelters made for the litter bags receiving drought treatment for the summer months. 
+This reduced solar radiation by 15-35% as stated in the methods section.
+
+**Litter species**: Roots and leaves from shrub species:
+ - *Larrea tridentata*: Creosote bush, evergreen
+ - *Prosopis glandulosa*: Honey Mesquite, winter deciduous
+Microsite information: *Larrea* litterbags were studied on a "gently sloping eroded terrace" in an area dominated by sparse *Larrea* cover. 
+*Prosopis* litter bags were deployed in a "flat subsidiary basin" in a dune area dominated by sparse *Prosopis *cover. 
+Leaves were left on surface and roots were buried 10 cm. 
+Surface litter was placed under shrubs (Information found in methods under Study site and Litterbag sampling).
+
+**Litter bags**: 5g was apportioned into a 12 x 12 cm$^2$ fiberglass screen with 1.5 mm mesh.
+
+**Treatments**: Summer-drought treatment was created by deploying shelters over the shrubs to block rain from June-September. 
+The shelters were made of metal frames (open sided) with a polyethylene roof, and designed to cover 5 times the canopy area of the shrub it was covering. 
+The polyethylene reduced total solar radiation by 15-35% and temperatures a differed at the soil surface by up to 2$^\circ$C and at 10 cm depth by 6$^\circ$C (see more at the end of the Methods: Climate and drought treatment section).
   
 ## Files
-
-<!--- Include a brief explaination to all the files in the folder--->
 
 These files are in the Kemp2003 data rescue.
 
@@ -148,15 +165,18 @@ These files are in the Kemp2003 data rescue.
 ## Data Rescue Plan
 
 + Lead
-  - [ ] Read the article or data resource and the discription of the target project
-  - [ ] Create a fresh fork of the primary repository https://github.com/ktoddbrown/SoilDRaH/tree/main, it might be useful to rename it 'SoilDRaH_Kemp2003'
-  - [ ] Create a copy of this template folder and rename it to Kemp2003
-  - [ ] Fill out Data summary section (except for the Files), the Data Rescue Plan (here!), and update the author section of the yml to reflect who is working on the rescue
-  - [ ] Create a GitHub issue from the Data Rescue template and get feedback from a reviewer on the project (Dr Todd-Brown or a grad student typically).
+  - [X] Read the article or data resource and the discription of the target project
+  - [X] Create a fresh fork of the primary repository
+  - [X] Create a copy of this template folder and rename it to Kemp2003
+  - [X] Fill out Data summary section (except for the Files), the Data Rescue Plan (here!)
+  - [ ] Update the author section of the yml to reflect who is working on the rescue
+  - [X] Create a GitHub issue from the Data Rescue template and get feedback from a reviewer on the project (Dr Todd-Brown or a grad student typically).
   - [ ] Add the reviewer to the author list in the yml
 + Do
-  - [ ] Create a spreadsheet with TableN and export it to csv
-  - [ ] Extract points from FigureM and export it to csv
+  - [ ] Create a spreadsheet with Table 1 and export it to csv
+  - [ ] Create a spreadsheet with Table 3 and export it to csv
+  - [ ] Extract points from Figure 3 and export it to csv
+  - [ ] Extract points from Figure 4 and export it to csv
   - [ ] Transcribe or copy the method section
   - [ ] Insert references to bib entries
   - [ ] reformat equations and mathematical symbols as [LaTex](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
