@@ -19,6 +19,14 @@ authors: #author scheme from https://quarto.org/docs/journals/authors.html
       - ref: uf-ees
     role: 
       - transcription: lead
+  - id: ChaseSaxour
+name:
+  given: Chase
+family: Saxour
+affiliation:
+  - ref: uf-ees
+role: 
+  - transcription: Secondary
 
 affiliations:
   - id: uf-ees
@@ -46,6 +54,12 @@ timelog:
       start: 2026-07-14 T1500
       #alternatively duration can be combined with a being/end
       duration: P2H
+  - activity: 
+  description: Secondary Transcription
+who: ChaseSaxour 
+start: 2026-06-28 
+end: 
+duration: PT2H
 
 ---
 
