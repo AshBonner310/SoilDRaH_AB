@@ -163,8 +163,8 @@ We are focusing on datasets that are not in [Aridec](https://essd.copernicus.org
 | Martínez 2010 | @Martinez2010 | [259](https://github.com/ktoddbrown/SoilDRaH/issues/259) | angelacanini-a11y |
 | Blanco 2011 | @Blanco2011 | [260](https://github.com/ktoddbrown/SoilDRaH/issues/260) | SavaScott |
 | Qasemian 2014 | @Qasemian2014 | [280](https://github.com/ktoddbrown/SoilDRaH/issues/280) | SavaScott |
-| Duguay 2000 | @Duguay2000 | TBA | Ben (need github handle) |
-| Dirks 2010 | @Dirks2010 | TBA | mbalvarez72 |
+| Duguay 2000 | @Duguay2000 | TBA | bcheser |
+| Dirks 2010 | @Dirks2010 | [328](https://github.com/ktoddbrown/SoilDRaH/issues/328) | mbalvarez72 |
 | Gliksman 2016 | @Gliksman2016 | [312](https://github.com/ktoddbrown/SoilDRaH/issues/312) | SavaScott |
 | Smith 2010 | @Smith2010 | [311](https://github.com/ktoddbrown/SoilDRaH/issues/311) | JennavieveK |
 | LadoMonserrat 2016 | @LadoMonserrat2016 | [307](https://github.com/ktoddbrown/SoilDRaH/issues/307) | laylakalandjian |
